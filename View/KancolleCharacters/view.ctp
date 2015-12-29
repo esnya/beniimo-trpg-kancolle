@@ -1,5 +1,5 @@
 <?php
-	echo $this->RealtimeForm->create('Character', $character, array(
+	echo $this->RealtimeForm->create('KancolleCharacter', $character, array(
 		'readonly' => !$is_owner,
 	));
 ?>
@@ -221,8 +221,8 @@
 		<?php
 			echo $this->AjaxImage->img(
 				$character,
-				'Character.image',
-				$this->Html->url(['action' => 'image', $character['Character']['id']])
+				'KancolleCharacter.image',
+				$this->Html->url(['action' => 'image', $character['KancolleCharacter']['id']])
 			);
 		?>
 	</div>
@@ -593,7 +593,7 @@
 	<?php
 		echo $this->Form->postLink(
 			__('Delete Character'),
-			array('action' => 'delete', $character['Character']['id']),
+			array('action' => 'delete', $character['KancolleCharacter']['id']),
 			array('class' => 'btn btn-danger', 'role' => 'button'),
 			__('Are you sure to delete character?')
 		);

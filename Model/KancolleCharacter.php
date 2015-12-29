@@ -1,5 +1,7 @@
 <?php
-	class Character extends KancolleAppModel {
+	class KancolleCharacter extends KancolleAppModel {
+        public $useTable = 'characters';
+
 		public $belongsTo = array(
 			'User',
 			'Kancolle.NavalDistrict',
@@ -11,6 +13,6 @@
 			$this->recursive = -1;
 			$character = $this->findById($id, array('user_id'));
 			$this->recursive = $tmp;
-			return Hash::get($character, 'Character.user_id') == User::getLoginId();
+			return Hash::get($character, 'KancolleCharacter.user_id') == User::getLoginId();
 		}
 	}

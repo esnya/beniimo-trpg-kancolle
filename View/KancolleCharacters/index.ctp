@@ -15,14 +15,14 @@
 					<?php 
 						echo $this->Html->link(
 							__('View'),
-							array('action' => 'view', $character['Character']['id']),
+							array('action' => 'view', $character['KancolleCharacter']['id']),
 							array('class' => 'btn btn-primary btn-xs', 'role' => 'button')
 						); 
 					?>
 				</td>
-				<td><?php echo h($character['Character']['name']); ?></td>
+				<td><?php echo h($character['KancolleCharacter']['name']); ?></td>
 				<td><?php echo h($character['User']['name']); ?></td>
-				<td><?php echo h($character['Character']['modified']); ?></td>
+				<td><?php echo h($character['KancolleCharacter']['modified']); ?></td>
 			</tr>
 			<?php endforeach; ?>
 		</tbody>
